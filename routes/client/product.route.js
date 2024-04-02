@@ -1,10 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const controller = require("../../controllers/client/product.controller");
 
-router.get("/", (req, res) => {
-  res.render("client/page/home/index", {
-    title: "Hey",
-    message: "This is product page!",
-  });
-});
+router.get("/", controller.index);
 module.exports = router;

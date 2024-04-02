@@ -1,0 +1,8 @@
+mixin product_item(link,name,price)
+    .nav__products
+        img.product-img(src=link ,alt='')
+        h2.product-title #{name}
+        div.price 
+            span $#{price}
+        .add-cart Add ToCart
+        //- i.bx.bxs-shopping-bag.add-cart

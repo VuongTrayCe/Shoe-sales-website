@@ -1,9 +1,65 @@
-html
-  head
-    title= title
-    link(rel="stylesheet", href="/css/style.css")
-  body
-    img(src="/images/banner.jpg", alt="", srcset="")
-    h1= message
+extends ../../layout/default.pug
+include ../../mixins/product_item.pug
+block main
+  section.shop.content
+    .div__content.div__content--left
+    .div__content.div__content--right
+      .div__content--right--up
+      .div__content--right--bottom
+  // Box_Products
+  section.box-products
+    h2.section-title
+      i.bx.bx-list-ul Shop Products
 
 
+    nav.nav__box
+      +product_item('/images/validation/sandals/image253.jpeg',"Vuong",100)
+      +product_item('/images/validation/sandals/image254.jpeg',"Vuong",1060)
+      +product_item('/images/validation/sandals/image255.jpg',"Vuong",1400)
+      +product_item('/images/validation/sandals/image256.jpeg',"Vuong",1020)
+      +product_item('/images/validation/sandals/image257.jpeg',"Vuong",1040)
+      +product_item('/images/validation/sandals/image258.jpeg',"Vuong",1200)
+      +product_item('/images/validation/sandals/image259.jpg',"Vuong",1600)
+      +product_item('/images/validation/sandals/image260.jpeg',"Vuong",1010)
+     
+    // slide_LproductList
+
+    nav.slide
+      button.nav_slide First
+      button.nav_slide Previous
+      button.nav_slide 1
+      button.nav_slide 2
+      button.nav_slide 3
+      button.nav_slide 4
+      button.nav_slide Next
+      button.nav_slide Last
+
+
+
+
+    //-    .nav__products
+    //-     img.product-img(src='/images/validation/sandals/image256.jpeg' alt='')
+    //-     h2.product-title Sandal 253
+    //-     span.price $25
+    //-     i.bx.bxs-shopping-bag.add-cart
+    //-   .nav__products
+    //-     img.product-img(src='/images/validation/sandals/image257.jpeg' alt='')
+    //-     h2.product-title Sandal 253
+    //-     span.price $25
+    //-     i.bx.bxs-shopping-bag.add-cart
+    //-   .nav__products
+    //-     img.product-img(src='/images/validation/sandals/image258.jpeg' alt='')
+    //-     h2.product-title Sandal 253
+    //-     span.price $25
+    //-     i.bx.bxs-shopping-bag.add-cart
+    //-   .nav__products
+    //-     img.product-img(src='/images/validation/sandals/image259.jpg' alt='')
+    //-     h2.product-title Sandal 253
+    //-     span.price $25
+    //-     i.bx.bxs-shopping-bag.add-cart
+    //-   .nav__products
+    //-     img.product-img(src='/images/validation/sandals/image260.jpeg' alt='')
+    //-     h2.product-title Sandal 253
+    //-     span.price $25
+    //-     i.bx.bxs-shopping-bag.add-cart
+    //- // slide_LproductList
