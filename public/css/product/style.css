@@ -1,0 +1,9 @@
+.wrapperListProduct {
+  display: flex;
+}
+.optionProductType {
+  width: 20%;
+}
+.listProducts {
+  width: 80%;
+}

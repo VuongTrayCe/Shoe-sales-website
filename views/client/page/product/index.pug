@@ -1,4 +1,14 @@
 extends ../../layout/default.pug
+include ../../mixins/product_item.pug
+
+
 
 block main
-  h1 Product
+  .wrapperListProduct
+    .optionProductType
+    section.listProducts
+      nav.nav__box
+        each item in product
+          +product_item(item.thumbnail,item.title,item.price)
+
+
