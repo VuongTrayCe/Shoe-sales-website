@@ -1,8 +1,10 @@
-mixin product_item(link,name,price)
+mixin product_item(link,name,price,priceNew,discountPercentage)
     .nav__products
         img.product-img(src=link ,alt='')
         h2.product-title #{name}
+        .discountPercentage -#{discountPercentage}%
         div.price 
             span $#{price}
+            span $#{priceNew}
         .add-cart Add ToCart
         //- i.bx.bxs-shopping-bag.add-cart

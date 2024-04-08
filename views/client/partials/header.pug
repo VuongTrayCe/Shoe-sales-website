@@ -10,10 +10,13 @@ header.header
             .col-3
                 .inner-search
                     .input-group
-                        input(type="text" class="form-control" placeholder="Bạn tìm kiếm gì" aria-label="Recipient's username" aria-describedby="button-addon2")
-                        button(class="btn btn-outline-secondary" type="button" id="button-addon2")
-                            i(class='bx bxs-search')
-       
+                        input(type="text" class="form-control",id="seach" placeholder="Bạn tìm kiếm gì" aria-label="Recipient's username" aria-describedby="button-addon2")
+                        //- label(for="seach")
+                        //- button(class="btn btn-outline-secondary" type="button" id="button-addon2")
+                            //- i(class='bx bxs-search')
+                    .inner-search-logo
+                        button(class="btn btn-search" type="button")
+
             .col-5
                 .inner-menu     
                     ul
@@ -26,9 +29,19 @@ header.header
                             a(href="/products") Sản Phẩm
                         li 
                             a(href="") Liên hệ
+                        li
+                            button(class="btn btn-cart", type="button")
+
+                            //- i(class='bx bxs-cart-add')
             .col-2
                 .inner_cart-account
-                    .inner-cart
-                        i(class='bx bxs-cart-add')
-                    .inner-account
-                        h5 UserName 
+                    ul 
+                        li
+                            a(href="") Trần Quốc Vương 
+                        li
+                            button
+                        //- select(class="form-select" aria-label="Default select example")
+                        //-     option Open this select menu
+                        //-     option(value="1") One
+                        //-     option(value="2") Two
+                        //-     option(value="3") Three

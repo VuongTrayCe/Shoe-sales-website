@@ -23,6 +23,24 @@ const productSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
+  size: {
+    type: [
+      {
+        sizeValue: {
+          type: Number,
+          required: true,
+        },
+        price: {
+          type: Number,
+          required: true,
+        },
+        stock: {
+          type: Number,
+          required: true,
+        },
+      },
+    ],
+  },
   brand: {
     type: String,
     required: true,
@@ -38,6 +56,14 @@ const productSchema = new mongoose.Schema({
   images: {
     type: [String], // Array of image URLs
     required: true,
+  },
+  status: {
+    type: String,
+    default: "active",
+  },
+  delete: {
+    type: String,
+    default: "false",
   },
 });
 const product = mongoose.model("product", productSchema, "products");

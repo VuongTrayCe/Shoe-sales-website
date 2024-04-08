@@ -1,0 +1,10 @@
+extends ../../layout/default.pug
+include ../../mixins/product_infor.pug
+block main
+  .wrapper
+    include ../../partials/sider.pug
+    .main
+      include ../../partials/header.pug
+      +product_infor()
+
+

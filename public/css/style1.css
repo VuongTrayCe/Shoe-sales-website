@@ -1,0 +1,54 @@
+.headerListProduct {
+  height: 30px;
+  width: 100%;
+  border-bottom: 1px solid #292525;
+}
+.wrapperListProduct {
+  display: flex;
+  background-color: #fcf8f8;
+}
+.optionProductType {
+  margin-left: 20px;
+  width: 20%;
+}
+.optionProductType > div {
+  /* text-align: center; */
+  padding-left: 20px;
+
+  padding-top: 20px;
+}
+.listProducts {
+  width: 80%;
+}
+
+.titleFilter {
+  margin-top: 20px;
+  border-bottom: 1px solid #292525;
+}
+/* .titleFilter p1 {
+  font-weight: bold;
+} */
+.optionProductType p1 {
+  font-weight: bold;
+}
+/* input {
+  margin-left: 100px;
+} */
+.titleFilterPrice {
+}
+.form-check {
+  margin-top: 20px;
+}
+.form-check label {
+  color: rgb(232, 117, 26);
+}
+.headerTitle {
+  margin-left: 20px;
+}
+.headerTitle p1 {
+  font-size: 13px;
+  padding-right: 10px;
+}
+.headerTitle :last-child {
+  color: rgb(232, 117, 26);
+}

@@ -1,0 +1,43 @@
+
+include ./product_infor_item.pug
+
+mixin product_infor()
+    nav.navbar.navbar_menu-title
+        .nameTitle title
+        button.btn.btn-warning.btn_addProduct(type='button') Thêm
+
+    nav.navbar.navbar_content
+        table.table.align-middle
+            thead
+                tr
+                    th(scope='col',style='width: 5%') STT
+                    th(scope='col',style='width: 10%') Image
+                    th(scope='col',style='width: 30%') Tiêu Đề
+                    th(scope='col',style='width: 10%') Brand
+                    th(cope='col',style='width: 10%') Trạng Thái 
+                    th(scope='col') Detail
+                    th(scope='col') Hoạt Động
+
+            tbody.table-group-divider
+                +product_infor_item()
+                +product_infor_item()
+                +product_infor_item()
+                +product_infor_item()
+                +product_infor_item()
+                +product_infor_item()
+                +product_infor_item()
+                +product_infor_item()
+                +product_infor_item()
+                +product_infor_item()
+                +product_infor_item()
+                +product_infor_item()
+                +product_infor_item()
+                +product_infor_item()
+                +product_infor_item()
+                +product_infor_item()
+                +product_infor_item()
+                +product_infor_item()
+                
+
+                
+

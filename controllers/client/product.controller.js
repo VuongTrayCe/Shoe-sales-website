@@ -4,10 +4,21 @@ module.exports.index = async (req, res) => {
   const listproduct = await Product.find({
     status: "active",
   });
-  // console.log(listproduct);
+  const newProducts = listproduct.map((item) => {
+    item.priceNew = (
+      (item.price * (100 - item.discountPercentage)) /
+      100
+    ).toFixed(0);
+    return item;
+  });
+  const listRouter = ["Trang Chủ"];
+  listRouter.push("Products");
+
+  // const
   res.render("client/page/product/index", {
-    title: "Hey",
+    title: "Trang Chủ > Products >",
     message: "This is product page!",
-    product: listproduct,
+    product: newProducts,
+    listRoute: listRouter,
   });
 };
