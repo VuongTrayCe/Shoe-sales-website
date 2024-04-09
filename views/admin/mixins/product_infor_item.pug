@@ -1,15 +1,18 @@
-mixin product_infor_item()
+mixin product_infor_item(item,index)
     tr.text-start
-                    th(class="stt_tableProduct",scope='row') 1
+                    th(class="stt_tableProduct",scope='row') #{index+1}
                     td.img_tableProduct
-                        img(src="/images/avatar.jpg", alt="", srcset="")
-                    td(class="_tableProduct") Alos
-                    td(class="_tableProduct") Nike
-                    td(class="text-wrap",style='color:var(--bs-success)') Active
+                        img(src=`${item.thumbnail}`, alt="", srcset="")
+                    td(class="_tableProduct") #{item.title}
+                    td(class="_tableProduct") #{item.brand}
+                    if item.status==="active"
+                        td(class="text-wrap",style='color:var(--bs-success)') #{item.status}
+                    else 
+                        td(class="text-wrap",style='color:var(--bs-danger)') #{item.status}
 
                     td
                         i.fa-solid.fa-eye
  
                     td 
-                        button.btn.btn-warning(type='button') Sửa
-                        button.btn.btn-danger(type='button') Xóa
+                        button.btn.btn-warning(type='button' ) Sửa
+                        button.btn.btn-danger.ml-1(type='button') Xóa
