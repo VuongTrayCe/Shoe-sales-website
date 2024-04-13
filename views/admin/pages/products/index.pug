@@ -1,10 +1,30 @@
 extends ../../layout/default.pug
 include ../../mixins/product_infor.pug
+include ../../mixins/pagination.pug
+include ../../mixins/detailProduct.pug
+
 block main
   .wrapper
     include ../../partials/sider.pug
     .main
       include ../../partials/header.pug
-      +product_infor(products,listOption)
+      +product_infor(products,listOption,keyword,detailProduct1)
+      +pagination(pagination)
+
+      form(
+        action="",
+         method="get"
+         id = "form_detail"
+        data_path =`/admin/products/detail`
+        )
+      form(
+        action="",
+         method="POST"
+         id = "form_change_status"
+        data_path_changestatus =`/admin/products/change-status`
+        )
+
+
+
 
 

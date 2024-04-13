@@ -1,0 +1,104 @@
+.detail_wrapper {
+  color: black;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+.detail_wrapper {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 40px;
+  border: 1px solid chocolate;
+}
+.titleDetailProduct {
+  background-color: rgb(218, 128, 25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+}
+.nav_item {
+  margin-top: 10px;
+  padding: 20px 20px;
+}
+.nav_item .itemInfor {
+  margin-top: 10px;
+}
+.titleDetailProduct h3 {
+  color: white;
+  /* text-align: center;
+  height: 100%; */
+}
+.detail_wrapper_infor {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  justify-content: center;
+  width: 100%; /* width: 900px; */
+
+  /* position: fixed; */
+  /* top: 50%;
+  left: 50%; */
+  /* transform: translate(-50%, -50%);
+  border: 1px solid #ccc;
+  background-color: #fff;
+  transition: all 0.5s ease-in-out;
+  display: none;
+  z-index: 100; */
+}
+.detailProductTop {
+  display: flex;
+  flex-direction: row;
+  /* height: 500px; */
+
+  background-color: rgb(82, 219, 219);
+}
+.detailProductBottom {
+  /* height: 500px; */
+  background-color: rgb(136, 228, 141);
+}
+
+.imageProduct {
+  padding-top: 10px;
+  width: 30%;
+}
+
+.imageProduct img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.inforProduct {
+  /* padding: 30px; */
+  border-left: 1px solid chocolate;
+
+  display: flex;
+  flex-direction: column;
+}
+.inforProduct .itemInfor {
+  color: rgb(216, 128, 27);
+}
+.inforProduct .itemInfor span {
+  margin-left: 30px;
+  color: rgb(77, 76, 56);
+}
+.fa-circle-xmark {
+  margin: 4px 4px;
+  top: 0;
+  right: 0;
+  position: absolute;
+  font-size: 2.5rem;
+}
+/* .tableDetailProduct {
+  width: 100px;
+} */
+.tableDetailProduct th {
+  width: 60px; /* Cài đặt độ rộng 150 pixel cho tất cả các cột */
+}

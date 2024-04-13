@@ -26,7 +26,7 @@ const productSchema = new mongoose.Schema({
   size: {
     type: [
       {
-        sizeValue: {
+        Value: {
           type: Number,
           required: true,
         },

@@ -1,17 +1,14 @@
-mixin product_infor_item(item,index)
+mixin product_infor_item(item,index) 
     tr.text-start
                     th(class="stt_tableProduct",scope='row') #{index+1}
                     td.img_tableProduct
                         img(src=`${item.thumbnail}`, alt="", srcset="")
                     td(class="_tableProduct") #{item.title}
                     td(class="_tableProduct") #{item.brand}
-                    if item.status==="active"
-                        td(class="text-wrap",style='color:var(--bs-success)') #{item.status}
-                    else 
-                        td(class="text-wrap",style='color:var(--bs-danger)') #{item.status}
-
+                    td(class="text-wrap") 
+                        button.btnStatusProduct(status =item.status, id_product =item._id style=`${item.status==="active"? "color:var(--bs-success)":"color:var(--bs-danger)"}`) #{item.status}
                     td
-                        i.fa-solid.fa-eye
+                            i.fa-solid.fa-eye(btn-data-detail, id_product =item._id)
  
                     td 
                         button.btn.btn-warning(type='button' ) Sửa
