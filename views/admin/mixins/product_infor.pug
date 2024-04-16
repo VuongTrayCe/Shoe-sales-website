@@ -1,6 +1,6 @@
 
 include ./product_infor_item.pug
-
+include ./confirm.pug
 mixin product_infor(products,listOption,keyword,detailProduct1)
     nav.navbar.navbar_menu-title
         .nameTitle Danh Sách Sản Phẩm
@@ -36,5 +36,6 @@ mixin product_infor(products,listOption,keyword,detailProduct1)
                     th(scope='col') Hoạt Động
 
             tbody.table-group-divider
+            +confirm()
             each item,index in products
                 +product_infor_item(item,index)

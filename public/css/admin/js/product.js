@@ -64,3 +64,30 @@ btnChangeStatus.forEach((element) => {
     form.submit();
   });
 });
+
+//  Delete Products
+const btnDelete = document.querySelectorAll("[btn_delete]");
+const confirmDialog = document.getElementById("confirmDialog");
+const confirmBtn = document.getElementById("confirmBtn");
+const cancelBtn = document.getElementById("cancelBtn");
+
+if (btnDelete.lengt != 0) {
+  btnDelete.forEach((element) => {
+    element.addEventListener("click", (e) => {
+      confirmDialog.style.display = "block"; // Hiển thị dialog
+      cancelBtn.addEventListener("click", () => {
+        confirmDialog.style.display = "none"; // Hiển thị dialog
+      });
+
+      confirmBtn.addEventListener("click", () => {
+        confirmDialog.style.display = "none"; // Hiển thị dialog
+        const idProduct = element.getAttribute("id_product");
+        const form = document.querySelector("#form_delete_product");
+        const path = form.getAttribute("data_path_delete");
+        const newPath = path + `/${idProduct}?_method=DELETE`;
+        form.action = newPath;
+        form.submit();
+      });
+    });
+  });
+}

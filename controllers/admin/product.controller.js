@@ -51,6 +51,12 @@ module.exports.changeStatus = async (req, res) => {
   await product.updateOne({ _id: id }, { status: status });
   res.redirect("back");
 };
+// [DELETE] /admin/products/delete/:id
+module.exports.delete = async (req, res) => {
+  const id = req.params.id;
+  await product.updateOne({ _id: id }, { delete: "true" });
+  res.redirect("back");
+};
 // [GET] /admin/products/add
 module.exports.add = async (req, res) => {
   res.render("admin/pages/products/addProduct", {

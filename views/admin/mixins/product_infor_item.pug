@@ -1,3 +1,5 @@
+include ./confirm.pug
+
 mixin product_infor_item(item,index) 
     tr.text-start
                     th(class="stt_tableProduct",scope='row') #{index+1}
@@ -10,6 +12,7 @@ mixin product_infor_item(item,index)
                     td
                             i.fa-solid.fa-eye(btn-data-detail, id_product =item._id)
  
-                    td 
-                        button.btn.btn-warning(type='button' ) Sửa
-                        button.btn.btn-danger.ml-1(type='button') Xóa
+                    td
+                        button.btn.btn-warning(type='button' data-toggle="modal" data-target="#exampleModal" ) Sửa
+                        if item.delete == "false"
+                            button.btn.btn-danger.ml-1.openConfirm(type='button' btn_delete id_product=item._id ) Xóa
