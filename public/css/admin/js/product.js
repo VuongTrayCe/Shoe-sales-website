@@ -37,14 +37,14 @@ if (detail_Btn_Close) {
 }
 
 // Add Products
-const addBtn = document.querySelector(".btn_addProduct");
+// const addBtn = document.querySelector(".btn_addProduct");
 
-addBtn.addEventListener("click", (e) => {
-  const url3 = new URL(document.location.href);
-  const path = addBtn.getAttribute("pathCurrent");
+// addBtn.addEventListener("click", (e) => {
+//   const url3 = new URL(document.location.href);
+//   const path = addBtn.getAttribute("pathCurrent");
 
-  document.location.href = path + "add";
-});
+//   document.location.href = path + "add";
+// });
 
 // Change the status of the product
 

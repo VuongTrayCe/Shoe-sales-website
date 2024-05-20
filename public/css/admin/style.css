@@ -159,7 +159,9 @@ a.sidebar-link {
 
 .btn_addProduct {
   position: absolute;
+  padding: 3px;
   right: 10px;
+  margin-right: none;
   /* margin-right: 10px; */
 }
 
