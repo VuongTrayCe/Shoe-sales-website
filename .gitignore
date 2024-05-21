@@ -6,6 +6,7 @@
 pnp.js
 
 /public/images
+package.json
 
 #Testing
 /coverage
