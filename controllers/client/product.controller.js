@@ -1,9 +1,19 @@
-const Product = require("../../models/product.model");
+const product = require("../../models/product.model");
+const getPagination = require("../../helpers/getPagination");
 
 module.exports.index = async (req, res) => {
-  const listproduct = await Product.find({
-    status: "active",
-  });
+  // const listOption = listOption1(req.query);
+  let find = {
+    delete: "false",
+  };
+  // Pagination
+  const numberDocument = await product.countDocuments(find);
+  const pagination = getPagination(req.query, 8, numberDocument);
+
+  const listproduct = await product
+    .find(find)
+    .limit(pagination.numberOfProduct)
+    .skip(pagination.positionProduct);
   const newProducts = listproduct.map((item) => {
     item.priceNew = (
       (item.price * (100 - item.discountPercentage)) /
@@ -20,5 +30,6 @@ module.exports.index = async (req, res) => {
     message: "This is product page!",
     product: newProducts,
     listRoute: listRouter,
+    pagination: pagination,
   });
 };

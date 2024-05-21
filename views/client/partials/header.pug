@@ -3,7 +3,7 @@ header.header
         .row.align-items-center
             .col-2
                 .inner-logo
-                    a(href="/") ShoeVanX 
+                    a(href="/") ShoeVanXN
                         
 
                         //- img(src="/images/logo.png",alt="Logo", srcset="")
@@ -35,13 +35,13 @@ header.header
                             //- i(class='bx bxs-cart-add')
             .col-2
                 .inner_cart-account
-                    ul 
-                        li
-                            a(href="") Trần Quốc Vương 
-                        li
-                            button
-                        //- select(class="form-select" aria-label="Default select example")
-                        //-     option Open this select menu
-                        //-     option(value="1") One
-                        //-     option(value="2") Two
-                        //-     option(value="3") Three
+                    ul.navbar-nav
+                        li.nav-item.dropdown
+                            a.nav-icon.pe-md-0(data-bs-toggle='dropdown')
+                                img.avatar.img-fluid.rounded(src='/images/avatar.jpg', alt='')
+                                div Quốc Vương
+                            .dropdown-menu.dropdown-menu-end
+                                a.dropdown-item(href='') Profile1
+                                a.dropdown-item(href='') Profile2
+                                a.dropdown-item(href='') Profile3
+                                a.dropdown-item(href='')
