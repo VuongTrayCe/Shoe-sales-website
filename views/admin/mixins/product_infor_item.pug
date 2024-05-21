@@ -13,6 +13,6 @@ mixin product_infor_item(item,index)
                             i.fa-solid.fa-eye(btn-data-detail, id_product =item._id)
  
                     td
-                        button.btn.btn-warning(type='button' data-toggle="modal" data-target="#exampleModal" ) Sửa
+                        button.btn.btn-warning(type='button' data-toggle="modal" data-target="#exampleModal" ) Edit
                         if item.delete == "false"
-                            button.btn.btn-danger.ml-1.openConfirm(type='button' btn_delete id_product=item._id ) Xóa
+                            button.btn.btn-danger.ml-1.openConfirm(type='button' btn_delete id_product=item._id ) Delete

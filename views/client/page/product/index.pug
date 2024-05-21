@@ -1,6 +1,7 @@
 extends ../../layout/default.pug
 include ../../mixins/product_item.pug
 include ../../mixins/header_product.pug
+include ../../mixins/pagination.pug
 
 
 block main
@@ -52,6 +53,8 @@ block main
       nav.nav__box
         each item in product
           +product_item(item.thumbnail,item.title,item.price,item.priceNew,item.discountPercentage)
+      +pagination(pagination)
+
         
 
 

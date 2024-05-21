@@ -28,3 +28,12 @@
 #cancelBtn {
   background-color: #dc3545;
 }
+.modal-dialog {
+  max-width: 700px;
+}
+.modal-dialog .row {
+  margin-bottom: 20px;
+}
+.btnDeleteSizeProduct {
+  font-size: 10px;
+}

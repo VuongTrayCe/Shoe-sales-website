@@ -35,7 +35,7 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
   justify-content: flex-start;
 }
 .header .inner-menu > ul > li {
@@ -52,32 +52,42 @@
 .bxs-cart-add {
   font-size: 25px;
 }
-.inner_cart-account > ul {
+.inner_cart-account {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.header .inner_cart-account > ul {
   display: flex;
   list-style: none;
   padding: 0;
   margin: 0;
   /* flex-wrap: wrap; */
-  /* justify-content: flex-start; */
-}
-.inner_cart-account > ul > li {
- padding: 0 5px;  /* text-align: center; */
-}
-.inner_cart-account > ul > li a {
-  font-size: 15px;
+  justify-content: flex-start;
 
+  margin: 0;
+  flex-wrap: wrap;
+}
+/* .inner_cart-account ul {
+  margin-left: 3rem;
+} */
+.header .inner_cart-account ul li {
+  display: block;
+  padding: 10px 3px;
+  /* text-align: center; */
+}
+.header .inner_cart-account ul li a {
+  display: flex;
+  flex-direction: row;
+  text-decoration: underline;
+  color: whitesmoke;
+}
+.header .inner_cart-account ul li a div {
+  padding-top: 0.5rem;
+  margin-left: 0.5rem;
+}
 
-}
-.inner_cart-account > ul > li button {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: #4caf50; /* Màu xanh lá */
-  color: white;
-  font-size: 16px;
-  padding: 10px 15px;
-  border: none;
-}
 .form-control {
   height: 25px;
   width: 20px;
@@ -119,14 +129,5 @@
   padding: 10px 20px;
   border: 1px solid #ccc;
   border-radius: 50%;
-  cursor: pointer;
-}
-#cart-icon{
-
-font-size: 20px;
-color: white;
-}
-#cart-icon:hover{
-  color: #4caf50;
   cursor: pointer;
 }

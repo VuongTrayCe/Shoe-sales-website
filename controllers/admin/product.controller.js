@@ -1,6 +1,7 @@
 const product = require("../../models/product.model");
 const listOption1 = require("../../helpers/filterStatus");
 const getPagination = require("../../helpers/getPagination");
+// const product = require("../../models/product.model");
 
 // [GET] /admin/products
 module.exports.index = async (req, res) => {
@@ -57,7 +58,7 @@ module.exports.delete = async (req, res) => {
   await product.updateOne({ _id: id }, { delete: "true" });
   res.redirect("back");
 };
-// [GET] /admin/products/add
+// [PUT] /admin/products/add
 module.exports.add = async (req, res) => {
   res.render("admin/pages/products/addProduct", {
     title: "Add Product",
