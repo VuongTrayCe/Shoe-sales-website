@@ -6,6 +6,39 @@ module.exports.index = async (req, res) => {
   let find = {
     delete: "false",
   };
+  let listRangePrice = [
+    {
+      text: "0-500000",
+      value: "0-500000",
+      id: "rangePrice1",
+    },
+    {
+      text: "500000-1000000",
+      value: "500000-1000000",
+      id: "rangePrice2",
+    },
+    {
+      text: "1000000-5000000",
+      value: "1000000-5000000",
+      id: "rangePrice3",
+    },
+    {
+      text: "6000000",
+      value: "6000000",
+      id: "rangePrice4",
+    },
+  ];
+  var listRange;
+  if (req.query.range) {
+    listRange = req.query.range.split("-");
+    const listRangeInt = listRange.map((item) => {
+      return parseInt(item);
+    });
+    find.price = { $gte: listRange[0], $lte: listRange[1] };
+  }
+  // if (req.query.status) {
+  //   find.status = req.query.status;
+  // }
   // Pagination
   const numberDocument = await product.countDocuments(find);
   const pagination = getPagination(req.query, 8, numberDocument);
@@ -31,5 +64,7 @@ module.exports.index = async (req, res) => {
     product: newProducts,
     listRoute: listRouter,
     pagination: pagination,
+    listRangePrice: listRangePrice,
+    rangePrice: req.query.range,
   });
 };

@@ -46,11 +46,22 @@
   text-decoration: none;
   color: whitesmoke;
 }
+.header .inner-menu > ul > :last-child {
+  display: flex;
+  flex-direction: row;
+  color: red;
+  position: relative;
+}
+.header .inner-menu > ul h5 {
+  font-size: 15px;
+  position: absolute;
+  bottom: 0px;
+  right: 4px;
+}
 .bxs-search-alt-2 {
   width: 20px;
 }
 .bxs-cart-add {
-  font-size: 25px;
 }
 .inner_cart-account {
   display: flex;
