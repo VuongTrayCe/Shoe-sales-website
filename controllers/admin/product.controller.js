@@ -1,6 +1,7 @@
 const product = require("../../models/product.model");
 const listOption1 = require("../../helpers/filterStatus");
 const getPagination = require("../../helpers/getPagination");
+// const product = require("../../models/product.model");
 
 // [GET] /admin/products
 module.exports.index = async (req, res) => {
