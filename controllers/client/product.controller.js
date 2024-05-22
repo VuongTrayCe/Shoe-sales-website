@@ -1,6 +1,7 @@
 const product = require("../../models/product.model");
 const getPagination = require("../../helpers/getPagination");
 
+// [GET] /products
 module.exports.index = async (req, res) => {
   // const listOption = listOption1(req.query);
   let find = {

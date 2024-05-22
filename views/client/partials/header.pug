@@ -3,19 +3,7 @@ header.header
         .row.align-items-center
             .col-2
                 .inner-logo
-                    a(href="/") ShoeVanXN
-                        
-
-                        //- img(src="/images/logo.png",alt="Logo", srcset="")
-            .col-3
-                .inner-search
-                    .input-group
-                        input(type="text" class="form-control",id="seach" placeholder="Bạn tìm kiếm gì" aria-label="Recipient's username" aria-describedby="button-addon2")
-                        //- label(for="seach")
-                        //- button(class="btn btn-outline-secondary" type="button" id="button-addon2")
-                            //- i(class='bx bxs-search')
-                    .inner-search-logo
-                        button(class="btn btn-search" type="button")
+                    a(href="")
 
             .col-5
                 .inner-menu     
@@ -29,10 +17,15 @@ header.header
                             a(href="/products") Sản Phẩm
                         li 
                             a(href="") Liên hệ
-                        li
-                            button(class="btn btn-cart", type="button")
-                            h5 1
-
+            .col-3
+                .inner-search
+                    .input-group
+                        input(type="text" class="form-control",id="seach" placeholder="Bạn tìm kiếm gì" aria-label="Recipient's username" aria-describedby="button-addon2")
+                        //- label(for="seach")
+                        //- button(class="btn btn-outline-secondary" type="button" id="button-addon2")
+                            //- i(class='bx bxs-search')
+                    .inner-search-logo
+                        button(class="btn btn-search" type="button")
                             //- i(class='bx bxs-cart-add')
             .col-2
                 .inner_cart-account
@@ -40,9 +33,11 @@ header.header
                         li.nav-item.dropdown
                             a.nav-icon.pe-md-0(data-bs-toggle='dropdown')
                                 img.avatar.img-fluid.rounded(src='/images/avatar.jpg', alt='')
-                                div Quốc Vương
                             .dropdown-menu.dropdown-menu-end
                                 a.dropdown-item(href='') Profile1
                                 a.dropdown-item(href='') Profile2
                                 a.dropdown-item(href='') Profile3
                                 a.dropdown-item(href='')
+                        li
+                            button(class="btn btn-cart", type="button")
+                            h5 1
