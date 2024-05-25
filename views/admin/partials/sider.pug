@@ -23,15 +23,9 @@ aside#sidebar
       // Item Customer
       li.sidebar-header Kh&aacute;ch H&agrave;ng
       li.sidebar-item
-        a.sidebar-link.collapsed(href='' data-bs-target='#customer' data-bs-toggle='collapse' aria-expanded='false')
+        a.sidebar-link(href='/admin/customers' data-bs-target='#customer'  aria-expanded='false')
           i.fa-solid.fa-person-military-pointing
-          |  Kh&aacute;ch
-          |                 H&agrave;ng
-        ul#customer.sidebar-dropdown.list-unstyled.collapse(data-bs-parent='#sidebar')
-          li.sidebar-item
-            a.sidebar-link(href='') Page 1
-          li.sidebar-item
-            a.sidebar-link(href='') Page 2
+          |  Khách hàng
       // ----Setup
       li.sidebar-header C&agrave;i &Dstrok;&#x1EB7;t
       li.sidebar-item
