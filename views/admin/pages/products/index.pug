@@ -10,7 +10,9 @@ block main
       include ../../partials/header.pug
       +product_infor(products,listOption,keyword,detailProduct1)
       +pagination(pagination)
-
+      - if (messages.info)
+        .message.info
+          span #{messages.info}
       form(
         action="",
          method="get"

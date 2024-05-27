@@ -11,6 +11,7 @@
 }
 
 .header {
+  /* max-height: 61px; */
   border-bottom: 1px solid #ddd;
   padding: 5px 0;
   background-color: white;
@@ -19,7 +20,7 @@
 }
 .header .inner-logo {
   width: 100%;
-  height: 50px;
+  height: 61px;
 
   background-image: url(../images/Logo5.png);
   background-size: cover; /* Hoặc contain, fill */
@@ -113,13 +114,24 @@
   padding: 3px;
 }
 .inner-search {
+  position: relative;
   display: flex;
   align-items: center;
   width: 300px;
   justify-content: center;
 }
+.inner-search-logo {
+  position: absolute;
+  right: 10px;
+}
 .inner-search .input-group input {
-  text-align: center;
+  border: none;
+  padding: 10px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: rgb(243, 243, 243);
+  width: 100%;
+  /* text-align: center; */
 }
 .btn-outline-secondary {
   background-image: url(../images/search.png);

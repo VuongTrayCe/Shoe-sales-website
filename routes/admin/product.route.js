@@ -7,6 +7,6 @@ router.patch("/change-status/:status/:id", controller.changeStatus);
 router.delete("/delete/:id", controller.delete);
 
 // router.get("/detail/:id", controller.detail);
-router.get("/add", controller.add);
+router.patch("/add", controller.add);
 
 module.exports = router;

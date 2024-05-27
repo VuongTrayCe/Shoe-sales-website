@@ -1,7 +1,7 @@
 .headerListProduct {
   height: 30px;
   width: 100%;
-  border-bottom: 1px solid #292525;
+  border-bottom: 1px solid rgb(204, 195, 195);
 }
 
 .headerTitle {
@@ -22,7 +22,7 @@
 .optionProductType {
   margin-left: 70px;
   width: 20%;
-  border: 2px solid gray;
+  border: 2px solid rgb(204, 195, 195);
   /* border-radius: 15px; */
   margin-top: 30px;
 }
@@ -44,7 +44,7 @@
 }
 
 .titleFilter {
-  border-bottom: 1px solid #292525;
+  border-bottom: 1px solid rgb(204, 195, 195);
 }
 /* .titleFilter p1 {
   font-weight: bold;

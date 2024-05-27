@@ -48,7 +48,7 @@ block main
     section.listProducts
       nav.nav__box
         each item in product
-          +product_item(item.thumbnail,item.title,item.price,item.priceNew,item.discountPercentage)
+          +product_item(item.thumbnail,item.title,item.price,item.priceNew,item.discountPercentage,item._id)
       +pagination(pagination)
 
         
