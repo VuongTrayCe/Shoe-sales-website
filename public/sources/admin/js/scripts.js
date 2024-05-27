@@ -1,7 +1,7 @@
 // selectedOption.selected = true;
 var url = new URL(document.location.href);
 // console.log(optionStatuss);
-const selectElement = document.getElementById("select1");
+const selectElement = document.getElementById("comboboxChangeStatus");
 selectElement.addEventListener("change", () => {
   //   const optionValue = optionStatuss.value;
   const selectedIndex = selectElement.selectedIndex;
@@ -18,7 +18,6 @@ const form_search = document.querySelector(".form-search");
 if (form_search) {
   form_search.addEventListener("submit", (e) => {
     e.preventDefault();
-    console.log("Vuong");
 
     const url = new URL(document.location.href);
     const keyword = e.target.elements.keyword.value;
