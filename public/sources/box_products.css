@@ -48,7 +48,7 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  background-color: orange;
+  background-color: rgb(49, 88, 188);
   color: var(--bg--color);
   font-size: 15px;
   cursor: pointer;

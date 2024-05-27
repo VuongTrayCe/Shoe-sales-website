@@ -12,7 +12,7 @@ btn.forEach((element) => {
 // Pagination Scripts
 const page = document.querySelectorAll(".page-link");
 page.forEach((element) => {
-  element.addEventListener("change", (e) => {
+  element.addEventListener("click", (e) => {
     const url2 = new URL(document.location.href);
     console.log(url2);
 

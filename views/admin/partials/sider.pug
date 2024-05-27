@@ -20,6 +20,18 @@ aside#sidebar
             a.sidebar-link(href='/admin/products') Page 1
           li.sidebar-item
             a.sidebar-link(href='') Page 2
+      // Item order
+      li.sidebar-header Đơn Hàng
+      li.sidebar-item
+        a.sidebar-link.collapsed(href='' data-bs-target='#orders' data-bs-toggle='collapse' aria-expanded='false')
+          i.fa-solid.fa-receipt 
+          |
+          | Đơn Hàng
+        ul#orders.sidebar-dropdown.list-unstyled.collapse(data-bs-parent='#sidebar')
+          li.sidebar-item
+            a.sidebar-link(href='/admin/order') Đơn đặt hàng
+          li.sidebar-item
+            a.sidebar-link(href='') page2
       // Item Customer
       li.sidebar-header Kh&aacute;ch H&agrave;ng
       li.sidebar-item

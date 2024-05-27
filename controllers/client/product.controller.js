@@ -1,6 +1,7 @@
 const product = require("../../models/product.model");
 const getPagination = require("../../helpers/getPagination");
 
+// [GET] /products
 module.exports.index = async (req, res) => {
   // const listOption = listOption1(req.query);
   let find = {
@@ -36,10 +37,6 @@ module.exports.index = async (req, res) => {
     });
     find.price = { $gte: listRange[0], $lte: listRange[1] };
   }
-  // if (req.query.status) {
-  //   find.status = req.query.status;
-  // }
-  // Pagination
   const numberDocument = await product.countDocuments(find);
   const pagination = getPagination(req.query, 8, numberDocument);
 
@@ -54,9 +51,10 @@ module.exports.index = async (req, res) => {
     ).toFixed(0);
     return item;
   });
-  const listRouter = ["Trang Chủ"];
-  listRouter.push("Products");
-
+  let listRouter = [
+    { title: "Trang Chủ", route: "/" },
+    { title: "products", route: "/products" },
+  ];
   // const
   res.render("client/page/product/index", {
     title: "Trang Chủ > Products >",
@@ -66,5 +64,48 @@ module.exports.index = async (req, res) => {
     pagination: pagination,
     listRangePrice: listRangePrice,
     rangePrice: req.query.range,
+  });
+};
+// [GET] /products/detail/:id
+module.exports.detailProduct = async (req, res) => {
+  const id = req.params.id;
+  const listproduct = await product.find({ _id: id });
+  let listRouter;
+  let newProducts;
+  if (listproduct) {
+    listRouter = [
+      { title: "Trang Chủ", route: "/" },
+      { title: "products", route: "/products" },
+      {
+        title: listproduct[0].title,
+        route: `/products/detail/${listproduct[0]._id}`,
+      },
+    ];
+    newProducts = listproduct.map((item) => {
+      item.priceNew = (
+        (item.price * (100 - item.discountPercentage)) /
+        100
+      ).toFixed(0);
+      return item;
+    });
+  }
+
+  const listproduct2 = await product.find().limit(6);
+  let newProducts2;
+  if (listproduct2) {
+    newProducts2 = listproduct2.map((item) => {
+      item.priceNew = (
+        (item.price * (100 - item.discountPercentage)) /
+        100
+      ).toFixed(0);
+      return item;
+    });
+  }
+  res.render("client/page/product/detailProduct", {
+    title: "Detail",
+    message: "This is product detail page !",
+    listRoute: listRouter,
+    listproduct: newProducts[0],
+    product: newProducts2,
   });
 };

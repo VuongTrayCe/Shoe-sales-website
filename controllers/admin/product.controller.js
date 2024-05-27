@@ -35,6 +35,8 @@ module.exports.index = async (req, res) => {
       (product) => product._id == req.query.idDetail
     );
   }
+  req.flash("info", "Welcome");
+
   res.render("admin/pages/products/index", {
     title: "pagedashboard",
     message: "This is Home!",
@@ -60,8 +62,49 @@ module.exports.delete = async (req, res) => {
 };
 // [PUT] /admin/products/add
 module.exports.add = async (req, res) => {
-  res.render("admin/pages/products/addProduct", {
-    title: "Add Product",
-    message: "This is Home!",
+  let sizearr = [];
+  const size = req.body.size;
+  const stock = req.body.stock;
+  var i = 0;
+  if (Array.isArray(size)) {
+    size.forEach((element) => {
+      sizearr.push({ Value: element, stock: stock[i], _id: null });
+      i = i + 1;
+    });
+  } else {
+    sizearr.push({ Value: size, stock: stock, _id: null });
+  }
+  let thumbnail = req.body.thumbnail;
+  if (thumbnail == "") {
+    thumbnail = null;
+  }
+  let image = req.body.images;
+  if (image == "") {
+    image = null;
+  }
+
+  let newproduct = {
+    title: req.body.title,
+    description: req.body.description,
+    price: parseInt(req.body.price),
+    stock: 100,
+    brand: req.body.brand,
+    category: req.body.category,
+    thumbnail: thumbnail,
+    images: image,
+    size: sizearr,
+    status: req.body.status,
+  };
+  const newProductModel = new product(newproduct);
+  await newProductModel.save((err) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    console.log("Product added successfully!");
   });
+  // res.render("admin/pages/products/addProduct", {
+  //   title: "Add Product",
+  //   message: "This is Home!",
+  // });
 };

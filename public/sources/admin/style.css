@@ -130,39 +130,31 @@ a.sidebar-link {
   font-weight: bold;
 }
 
-.navbar_search_filter_tilte {
+.navbar_search {
+  position: relative;
   padding-left: 10px;
   font-size: 15px;
   font-family: "Poppins", sans-serif;
 }
-.navbar_menu-Search {
+.navbar_search button {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  /* width: 50%; */
+}
+.searchAndStatus {
   position: relative;
-  display: flex;
-  justify-content: flex-start;
-  justify-items: flex-start;
+  background: var(--bs-body-bg);
+  margin-left: 0px;
 }
-.form-search {
-  margin-left: 10px;
-  display: flex;
-  width: 90%;
-  align-items: center;
-}
-.navbar_menu-Search input {
-  width: 30%;
-}
-.navbar_menu-Search i {
-  margin: 0px 10px;
-}
-.navbar_menu-Search select {
-  width: 20%;
-}
-
 .btn_addProduct {
   position: absolute;
   padding: 3px;
+  top: 50%;
+
   right: 10px;
   margin-right: none;
-  /* margin-right: 10px; */
+  margin-right: 10px;
 }
 
 .navbar {

@@ -14,10 +14,17 @@ block main
       .titleFilterPrice 
         p1 Mức giá
         for item in listRangePrice
+            if item.value == rangePrice
               .form-check
-                input.form-check-input(id=`${item.id}` type='radio' name='flexRadioDefault' radioRangePrice value=`${item.text}`)
+                input.form-check-input(checked=true id=`${item.id}` type='radio' name='flexRadioDefault' radioRangePrice value=`${item.text}`  )
                 label.form-check-label(for=`${item.id}`)
                   | #{item.text}
+            else 
+              .form-check
+                input.form-check-input( id=`${item.id}` type='radio' name='flexRadioDefault' radioRangePrice value=`${item.text}`  )
+                label.form-check-label(for=`${item.id}`)
+                  | #{item.text}
+
 
       div 
         p1 Thương hiệu
@@ -41,7 +48,7 @@ block main
     section.listProducts
       nav.nav__box
         each item in product
-          +product_item(item.thumbnail,item.title,item.price,item.priceNew,item.discountPercentage)
+          +product_item(item.thumbnail,item.title,item.price,item.priceNew,item.discountPercentage,item._id)
       +pagination(pagination)
 
         

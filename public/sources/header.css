@@ -11,25 +11,22 @@
 }
 
 .header {
+  /* max-height: 61px; */
   border-bottom: 1px solid #ddd;
   padding: 5px 0;
-  background-color: #e8751a;
-}
+  background-color: white;
 
-.header .inner-logo img {
-  max-height: 50px;
-  max-width: 100px;
-  margin-left: 30%;
+  /* background-color: #e8751a; */
 }
-.header .inner-logo a {
-  font-size: 30px;
-  text-decoration: none;
-  margin-right: 50px;
-  color: whitesmoke;
+.header .inner-logo {
+  width: 100%;
+  height: 61px;
 
-  /* margin-left: 10%; */
+  background-image: url(../images/Logo5.png);
+  background-size: cover; /* Hoặc contain, fill */
+  background-position: center;
+  background-repeat: no-repeat;
 }
-
 .header .inner-menu > ul {
   display: flex;
   list-style: none;
@@ -44,7 +41,9 @@
 }
 .header .inner-menu > ul > li a {
   text-decoration: none;
-  color: whitesmoke;
+  color: black;
+  font-weight: bold;
+  /* color: whitesmoke; */
 }
 .header .inner-menu > ul > :last-child {
   display: flex;
@@ -55,8 +54,8 @@
 .header .inner-menu > ul h5 {
   font-size: 15px;
   position: absolute;
-  bottom: 0px;
-  right: 4px;
+  top: 0px;
+  right: 0;
 }
 .bxs-search-alt-2 {
   width: 20px;
@@ -73,6 +72,7 @@
   display: flex;
   list-style: none;
   padding: 0;
+  flex-direction: row;
   margin: 0;
   /* flex-wrap: wrap; */
   justify-content: flex-start;
@@ -85,7 +85,7 @@
 } */
 .header .inner_cart-account ul li {
   display: block;
-  padding: 10px 3px;
+  margin-right: 10px;
   /* text-align: center; */
 }
 .header .inner_cart-account ul li a {
@@ -98,6 +98,11 @@
   padding-top: 0.5rem;
   margin-left: 0.5rem;
 }
+.header .inner_cart-account ul li:last-child {
+  padding-top: 8px;
+  display: flex;
+  flex-direction: row;
+}
 
 .form-control {
   height: 25px;
@@ -109,13 +114,24 @@
   padding: 3px;
 }
 .inner-search {
+  position: relative;
   display: flex;
   align-items: center;
-  width: 200px;
+  width: 300px;
   justify-content: center;
 }
-.input-group input {
-  /* margin-right: 3px; */
+.inner-search-logo {
+  position: absolute;
+  right: 10px;
+}
+.inner-search .input-group input {
+  border: none;
+  padding: 10px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: rgb(243, 243, 243);
+  width: 100%;
+  /* text-align: center; */
 }
 .btn-outline-secondary {
   background-image: url(../images/search.png);
@@ -125,15 +141,16 @@
 }
 .btn-cart {
   background-image: url(../images/cart.png);
-  height: 27px;
+  height: 30px;
   border: none;
   background-repeat: no-repeat;
 }
 .btn-search {
+  width: 27px;
   height: 27px;
   border: none;
   background-repeat: no-repeat;
-  background-image: url(../images/icons8-search-24.png);
+  background-image: url(../images/search1.png);
 }
 .input-group label {
   display: inline-block;

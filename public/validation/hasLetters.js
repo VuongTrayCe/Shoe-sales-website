@@ -20,3 +20,7 @@ export function hasLetters(string) {
   const pattern = /^[0-9]+$/;
   return pattern.test(string);
 }
+// export function hasLetters(string) {
+//   const pattern = /^[0-9]+$/;
+//   return pattern.test(string);
+// }
